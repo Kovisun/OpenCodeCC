@@ -1,0 +1,13 @@
+services:
+  opencode:
+    image: opencodecc:latest
+    container_name: OpenCode
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      - HTTP_PROXY=http://127.0.0.1:20172
+      - HTTPS_PROXY=http://127.0.0.1:20172
+      - http_proxy=http://127.0.0.1:20172
+      - https_proxy=http://127.0.0.1:20172
+      - TELEGRAM_BOT_TOKEN=8576803588:AAGF-BUObJ-_BXRmHjg29EMxGdrAtmLGsuA
+    command: ["web", "--hostname", "0.0.0.0", "--port", "3000"]
