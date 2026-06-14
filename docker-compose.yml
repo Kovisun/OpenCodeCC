@@ -1,6 +1,6 @@
 services:
   opencode:
-    image: opencodecc:latest
+    image: ghcr.io/kovisun/opencodecc:latest
     container_name: OpenCode
     restart: unless-stopped
     network_mode: host
